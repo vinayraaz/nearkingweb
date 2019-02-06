@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/cust_toolbar"/>
+
+
+        <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:padding="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/sub_automobiles"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Automobiles Motorcycles"
+                android:textSize="18sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Auto Replacement Parts"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Car Electronics"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Car Lights"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Car Repair Tools"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Interior Accessories"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Motorcycle Accessories Parts"
+                 android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/beautyhealth"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Beauty Health"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded" />
+
+            <!--                <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Hair Care Styling"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Health Care"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Makeup"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Nails Art Tools"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Shaving Hair Removal"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/rounded_corner_design"
+                                android:drawableLeft="@drawable/arrow"
+                                android:drawablePadding="10dp"
+                                android:gravity="center|left"
+                                android:text="Skin Care"
+                                android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/computeroffice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Computer Office"
+                android:textSize="18sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Computer Components"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Computer Peripherals"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="External Storage"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Office Electronics"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Tablet Accessories"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Tablets"
+                 android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/conselectronic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Consumer Electronics"
+                android:textSize="18sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Accessories Parts"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Camera Photo"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Electronic Cigarette"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Home Audio Video"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Portable Audio Video"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Smart Electronics"
+                 android:textSize="18sp" />
+-->
+            <TextView
+                android:id="@+id/homegarden"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Home Garden"
+                android:textSize="18sp" />
+
+            <!--     <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Arts,Crafts Sewing"
+                     android:textSize="18sp" />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Festive Party Supplies"
+                     android:textSize="18sp" />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Home Decor"
+                     android:textSize="18sp" />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Home Storage Organization"
+                     android:textSize="18sp" />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Home Textile"
+                     android:textSize="18sp" />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:layout_marginTop="8dp"
+                     android:background="@drawable/rounded_corner_design"
+                     android:drawableLeft="@drawable/arrow"
+                     android:drawablePadding="10dp"
+                     android:gravity="center|left"
+                     android:text="Kitchen,Dining Bar"
+                     android:textSize="18sp" />-->
+
+
+            <TextView
+                android:id="@+id/homeimprove"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Home Improvement"
+                android:textSize="18sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Bathroom Fixtures"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Electrical Equipments Supplies"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Hardware"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Home Appliances"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Kitchen Fixtures"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Lights Lighting"
+                 android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/jewelry"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Jewelry Accessories"
+                android:textSize="18sp" />
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Beads Jewelry Making"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Bracelets Bangles"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Earrings"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Fine Jewelry"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Jewelry Sets More"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Necklaces Pendants"
+                android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/clothingass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Men's Clothing Accessories"
+                android:textSize="18sp" />
+
+            <!--  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Accessories"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Jackets Coats"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Pants"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Shirts"
+                  android:textSize="18sp" />
+
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Tops Tees"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Underwear"
+                  android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/mobileass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Mobiles Accessorie"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/motherkids"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Mother Kids"
+                android:textSize="18sp" />
+
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Baby Shoes"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Boys Baby Clothing"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Boys Clothing"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Children's Shoes"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Girls Baby Clothing"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Girls Clothing"
+                 android:textSize="18sp" />-->
+
+
+            <TextView
+                android:id="@+id/ourproduct"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Our Product"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/phoneass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Phones Accessories"
+                android:textSize="18sp" />
+
+            <!--  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Communication Equipments"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Mobile Phone Parts"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Phone Bags Cases"
+                  android:textSize="18sp" />-->
+            <TextView
+                android:id="@+id/shoes"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Shoes"
+                android:textSize="18sp" />
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Men's Boots"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Men's Shoes"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Shoe Accessories"
+                 android:textSize="18sp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Women's Boots"
+                 android:textSize="18sp" />
+
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="40dp"
+                 android:layout_marginTop="8dp"
+                 android:background="@drawable/rounded_corner_design"
+                 android:drawableLeft="@drawable/arrow"
+                 android:drawablePadding="10dp"
+                 android:gravity="center|left"
+                 android:text="Women's Shoes"
+                 android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/sports"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Sports Entertainment"
+                android:textSize="18sp" />
+
+            <!--  <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Camping Hiking"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Cycling"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Fishing"
+                  android:textSize="18sp" />
+
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Sneakers"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Sports Clothing"
+                  android:textSize="18sp" />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="40dp"
+                  android:layout_marginTop="8dp"
+                  android:background="@drawable/rounded_corner_design"
+                  android:drawableLeft="@drawable/arrow"
+                  android:drawablePadding="10dp"
+                  android:gravity="center|left"
+                  android:text="Swimming"
+                  android:textSize="18sp" />-->
+
+
+            <TextView
+                android:id="@+id/tvappliances"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="TVs Appliances"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/womancloths"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Women's Clothing Accessories"
+                android:textSize="18sp" />
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Accessories"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Bottoms"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Intimates"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Jackets Coats"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="Sweaters"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_corner_design"
+                android:drawableLeft="@drawable/arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center|left"
+                android:text="TopsTees"
+                android:textSize="18sp" />
+-->
+
+
+        </LinearLayout>
+
+
+</LinearLayout>
