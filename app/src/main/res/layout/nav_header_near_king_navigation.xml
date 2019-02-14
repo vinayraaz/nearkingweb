@@ -30,18 +30,19 @@
         app:srcCompat="@mipmap/ic_launchernew" />
 
     <TextView
+        android:id="@+id/name"
         style="@style/textview_font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center|left"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="UserName" />
+        android:text="" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/email"
         style="@style/textview_font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="username@gmail.com" />
+        android:text="" />
 
 </LinearLayout>

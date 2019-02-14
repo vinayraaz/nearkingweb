@@ -45,8 +45,18 @@ public class MyAccount_Activity extends NearKingNavigation implements View.OnCli
     public void onClick(View v) {
         onBackPressed();
         Intent back = new Intent(MyAccount_Activity.this,NearKingHome.class);
+       // back.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(back);
         finish();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent back = new Intent(MyAccount_Activity.this,NearKingHome.class);
+      //  back.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(back);
+        finish();
     }
 }

@@ -216,26 +216,32 @@ public class SignInSignUpActivity extends AppCompatActivity {
                         try {
                             Intent home_intent = new Intent(SignInSignUpActivity.this,NearKingHome.class);
                             JsonObject jsonObject = response.body().getAsJsonObject();
+                            restUserId = String.valueOf(jsonObject.get("id"));
+System.out.println("RESponse***"+jsonObject);
+System.out.println("RESponse***"+jsonObject.get("id").toString());
+System.out.println("RESponse***"+restUserId);
 
-                            restUserId = jsonObject.get("id").toString();
                             restUserEmail = jsonObject.get("user_email").toString();
                             restUserLogin= jsonObject.get("user_login").toString();
                             restUserDisplay = jsonObject.get("display_name").toString();
 
-                            finalUserId =restUserId.substring(1,restUserId.length()-1);
+                            finalUserId =restUserId;
                             finalUserEmail =restUserEmail.substring(1,restUserEmail.length()-1);
                             finalUserLogin =restUserLogin.substring(1,restUserLogin.length()-1);
                             finalUserDisplay =restUserDisplay.substring(1,restUserDisplay.length()-1);
 
-                            System.out.println(" CommonConstant.LASTNAME***" + finalUserEmail+"**"+finalUserLogin+"***"+finalUserDisplay);
+                            System.out.println(" CommonConstant.LASTNAME***" + finalUserId+"**"+finalUserLogin+"***"+finalUserDisplay);
                             loginShare = getSharedPreferences("NKing_Login", Context.MODE_PRIVATE);
                             loginEditor=loginShare.edit();
                             CommonConstant.LOGIN_STATUS = "true";
+                            CommonConstant.USERID = finalUserId;
                             loginEditor.putString("LOGIN_STATUS", CommonConstant.LOGIN_STATUS);
                             loginEditor.putString("USER_ID", finalUserId);
+                            loginEditor.putString(CommonConstant.USERID, finalUserId);
                             loginEditor.putString("USER_EMAIL", finalUserEmail);
                             loginEditor.putString("USER_LOGIN", finalUserLogin);
                             loginEditor.putString("DISPLAY_NAME",finalUserDisplay);
+                            System.out.println("CommonConstant.USERID****"+CommonConstant.USERID+"***"+finalUserId);
 
                             loginEditor.commit();
                             startActivity(home_intent);

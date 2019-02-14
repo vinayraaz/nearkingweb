@@ -15,6 +15,7 @@ public class CommonConstant {
     public static String USEREMAIL="";
     public static String USERLOGIN="";
     public static String DISPLAYNAME="";
+    public static Integer PAYMENTMODE=100;
 
     public static String BILLING_FName="null";
     public static String BILLING_LName="null";
@@ -36,6 +37,10 @@ public class CommonConstant {
     public static String SHIPPING_City="null";
     public static String SHIPPING_State="null";
 
+    public static String PAYMENT_METHOD="null";
+    public static String PAYMENT_METHODTITLE="null";
+    public static boolean PAYMENT_SETPAID=true;
+
     public static String PAYMENT_MethodId="null";
     public static String PAYMENT_MethodTitle="null";
     public static String PAYMENT_MethodPaid="null";
@@ -48,6 +53,9 @@ public class CommonConstant {
     public static String SHIPPING_LINE_MethodId="null";
     public static String SHIPPING_LINE_MethodTitle="null";
     public static String SHIPPING_LINE_MethodTotal="null";
+    public static String COLOR="White";
+    public static String ORDERID="";
+    public static String TOTALPRICE="White";
 
 
 

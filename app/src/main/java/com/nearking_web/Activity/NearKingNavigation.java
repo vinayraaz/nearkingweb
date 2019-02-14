@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nearking_web.NearKing.MyAccount_Activity;
@@ -29,6 +30,7 @@ public class NearKingNavigation extends AppCompatActivity
     NavigationView navigationView;
     Menu nav_Menu;
     MenuItem myAccount, signIn, logOut;
+    TextView UserName,UserEmail;
 
     static {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
@@ -51,14 +53,15 @@ public class NearKingNavigation extends AppCompatActivity
         });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View header = navigationView.getHeaderView(0);
+        UserName =(TextView)header.findViewById(R.id.name);
+        UserEmail =(TextView)header.findViewById(R.id.email);
         nav_Menu = navigationView.getMenu();
         myAccount = nav_Menu.findItem(R.id.nav_account);
         signIn = nav_Menu.findItem(R.id.nav_signin);
@@ -66,13 +69,17 @@ public class NearKingNavigation extends AppCompatActivity
 
         sharpf = getSharedPreferences("NKing_Login", Context.MODE_PRIVATE);
         CommonConstant.LOGIN_STATUS = sharpf.getString("LOGIN_STATUS", "0");
-       /* CommonConstant.USERID =sharpf.getString(CommonConstant.USERID,"");
-        CommonConstant.USEREMAIL =sharpf.getString(CommonConstant.USEREMAIL,"");
-        CommonConstant.USERLOGIN =sharpf.getString(CommonConstant.USERLOGIN,"");
-        CommonConstant.DISPLAYNAME =sharpf.getString(CommonConstant.DISPLAYNAME,"");
-*/
+
+
+        CommonConstant.USERID =sharpf.getString("USER_ID","0");
+        CommonConstant.USEREMAIL =sharpf.getString("USER_EMAIL","0");
+        CommonConstant.USERLOGIN =sharpf.getString("USER_LOGIN","0");
+        CommonConstant.DISPLAYNAME =sharpf.getString("DISPLAY_NAME","0");
+
         System.out.println("CommonConstant.LOGIN_STATUS***navigation**" + CommonConstant.LOGIN_STATUS+"***"+CommonConstant.USEREMAIL);
         if (CommonConstant.LOGIN_STATUS.equals("true")) {
+           UserName.setText(CommonConstant.USERLOGIN);
+            UserEmail.setText(CommonConstant.USEREMAIL);
             showMenuItems();
 
         } else {
@@ -149,7 +156,7 @@ public class NearKingNavigation extends AppCompatActivity
         } /*else if (id == R.id.nav_slideshow) {
 
         }*/ else if (id == R.id.nav_cart) {
-            Intent nk_sign = new Intent(NearKingNavigation.this, AddCart_Activity.class);
+            Intent nk_sign = new Intent(NearKingNavigation.this, BuyNow_Activity.class);
             startActivity(nk_sign);
         } else if (id == R.id.nav_share) {
 

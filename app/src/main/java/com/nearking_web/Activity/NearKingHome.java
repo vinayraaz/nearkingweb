@@ -103,7 +103,7 @@ public class NearKingHome extends NearKingNavigation implements View.OnClickList
         CommonConstant.USERLOGIN =sharpf.getString("USER_LOGIN","0");
         CommonConstant.DISPLAYNAME =sharpf.getString("DISPLAY_NAME","0");
 
-        System.out.println(" CommonConstant.LASTNAME***" +  CommonConstant.USEREMAIL+"**"+ CommonConstant.USERLOGIN +"***"+ CommonConstant.DISPLAYNAME);
+        System.out.println(" CommonConstant.LASTNAME***" +  CommonConstant.USERID+"**"+ CommonConstant.USERLOGIN +"***"+ CommonConstant.DISPLAYNAME);
         if (connectionDetector.isConnectingToInternet()) {
             utilities.displayProgressDialog(this, "Please wait...", false);
             loadBannerImages();
@@ -115,66 +115,68 @@ public class NearKingHome extends NearKingNavigation implements View.OnClickList
     }
 
     private void loadBannerImages() {
-        Call<List<BannerResponse>> call = apiService.getBanner();
-        call.enqueue(new Callback<List<BannerResponse>>() {
-            @Override
-            public void onResponse(Call<List<BannerResponse>> call, Response<List<BannerResponse>> response) {
-                try {
-                    List<String> gallery_images = new ArrayList<String>();
-                    for (int i = 0; i < response.body().size(); i++) {
-                        gallery_images.add(response.body().get(i).getGuid());
-                    }
-
-                    mAdapter = new ViewPagerAdapter(NearKingHome.this, gallery_images);
-                    viewPager.setAdapter(mAdapter);
-
-                    viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                        @Override
-                        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+        try {
+            Call<List<BannerResponse>> call = apiService.getBanner();
+            call.enqueue(new Callback<List<BannerResponse>>() {
+                @Override
+                public void onResponse(Call<List<BannerResponse>> call, Response<List<BannerResponse>> response) {
+                    try {
+                        List<String> gallery_images = new ArrayList<String>();
+                        for (int i = 0; i < response.body().size(); i++) {
+                            gallery_images.add(response.body().get(i).getGuid());
                         }
 
-                        @Override
-                        public void onPageSelected(int position) {
-                            for (int i = 0; i < dotsCount; i++) {
-                                dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot));
+                        mAdapter = new ViewPagerAdapter(NearKingHome.this, gallery_images);
+                        viewPager.setAdapter(mAdapter);
+
+                        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                            @Override
+                            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
                             }
 
-                            dots[position].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
-                            page = position;
+                            @Override
+                            public void onPageSelected(int position) {
+                                for (int i = 0; i < dotsCount; i++) {
+                                    dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot));
+                                }
+
+                                dots[position].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
+                                page = position;
+                            }
+
+                            @Override
+                            public void onPageScrollStateChanged(int state) {
+
+                            }
+                        });
+
+                        try {
+                            handler.postDelayed(runnable, 4000);
+                        } catch (Exception e) {
+
                         }
 
-                        @Override
-                        public void onPageScrollStateChanged(int state) {
+                        setUiPageViewController();
+                        productApi();
+                        //CategoryList();
 
-                        }
-                    });
-
-                    try {
-                        handler.postDelayed(runnable, 4000);
-                    } catch (Exception e) {
+                    } catch (Exception je) {
 
                     }
 
-                    setUiPageViewController();
-                    productApi();
-                    //CategoryList();
-
-                } catch (Exception je) {
 
                 }
 
-
-            }
-
-            @Override
-            public void onFailure(Call<List<BannerResponse>> call, Throwable t) {
-                utilities.cancelProgressDialog();
-                Log.i("Response**" , t.toString());
-            }
-        });
-
-
+                @Override
+                public void onFailure(Call<List<BannerResponse>> call, Throwable t) {
+                    utilities.cancelProgressDialog();
+                    Log.i("Response**", t.toString());
+                }
+            });
+        }catch (Exception e){
+           e.printStackTrace();
+        }
     }
 
 
@@ -276,7 +278,7 @@ public class NearKingHome extends NearKingNavigation implements View.OnClickList
         switch (v.getId()) {
             case R.id.all_category:
                 Intent category_intent = new Intent(NearKingHome.this, AllCategoryList_Activity.class);
-             //   category_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 startActivity(category_intent);
 
 

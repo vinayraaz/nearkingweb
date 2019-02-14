@@ -3,12 +3,14 @@ package com.nearking_web.Api;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.nearking_web.RequestModel.CODModel.CODOrderRequest;
 import com.nearking_web.RequestModel.OrderMain.OrderRequest;
 import com.nearking_web.RequestModel.UserLogin;
 import com.nearking_web.RequestModel.createMainModel.CreateNewUser;
 import com.nearking_web.ResponseModel.BannerResponse;
 import com.nearking_web.model.CategoryResponse;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -50,9 +52,21 @@ public interface ApiInterface {
     @GET("products")
     Call<JsonArray> getCategoryProduct(@Query("category") String categoryId, @Query("consumer_key") String consumer_key, @Query("consumer_secret") String consumer_secret);
 // order API
+
     // https://www.nearking.com/wp-json/wc/v3/orders?oauth_consumer_key=ck_894c0b2552d9f6181f890a07c4f60692468fc870&oauth_token&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1548571701&oauth_nonce=N8GsPr&oauth_version=1.0&oauth_signature=jX+9tnps+wVtv+Bca2J0sAWj1s0=
     @POST("orders?oauth_consumer_key=ck_894c0b2552d9f6181f890a07c4f60692468fc870&oauth_token&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1548571701&oauth_nonce=N8GsPr&oauth_version=1.0&oauth_signature=jX+9tnps+wVtv+Bca2J0sAWj1s0=")
     Call<JsonObject> getOrder(@Header("Authorization") String authToken, @Body OrderRequest orderRequest);
+
+   //COD Order
+   @POST("orders?oauth_consumer_key=ck_894c0b2552d9f6181f890a07c4f60692468fc870&oauth_token&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1548571701&oauth_nonce=N8GsPr&oauth_version=1.0&oauth_signature=jX+9tnps+wVtv+Bca2J0sAWj1s0=")
+   Call<JsonObject> getCODOrder(@Header("Authorization") String authToken, @Body CODOrderRequest codOrderRequest);
+
+
+
+    //https://www.nearking.com/wp-json/wc/v3/payment_gateways/?consumer_key=ck_1fe73bc89b578730b29acb7e9102834b91aade52&consumer_secret=cs_944f5e9a6d8d3e61e580b1c0b0854f686e301bd1
+    @GET("payment_gateways")
+    Call<JsonArray> getPaymentGetwa(@Query("consumer_key") String consumer_key, @Query("consumer_secret") String consumer_secret);
+
 }
 
 

@@ -102,7 +102,7 @@ public class AddCart_Activity extends AppCompatActivity implements View.OnClickL
         } else {
             Toast.makeText(getApplicationContext(),"No have data in shopping cart",Toast.LENGTH_SHORT).show();
             Intent i2= new Intent(AddCart_Activity.this,NearKingHome.class);
-            i2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+           // i2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i2);
         }
 

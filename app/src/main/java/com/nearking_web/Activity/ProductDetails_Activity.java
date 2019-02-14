@@ -151,9 +151,6 @@ public class ProductDetails_Activity extends AppCompatActivity implements View.O
 
                 } else {
                     buyNowMethod();
-                   /* Intent ordercompleteIntent = new Intent(ProductDetails_Activity.this, OrderComplete_Activity.class);
-                    startActivity(ordercompleteIntent);
-                    finish();*/
 
                 }
                 break;
@@ -174,7 +171,7 @@ public class ProductDetails_Activity extends AppCompatActivity implements View.O
     private void AddCartMethod() {
 
         Intent cartIntent = new Intent(ProductDetails_Activity.this, AddCart_Activity.class);
-        // cartIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+
         cartIntent.putExtra("proId", proId);
         cartIntent.putExtra("proName", proName);
         cartIntent.putExtra("proSlug", proSlug);

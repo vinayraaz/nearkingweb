@@ -85,7 +85,6 @@ public class AllCategoryList_Activity extends NearKingNavigation implements View
 
     private void CategoryLoadMethod(List<CategoryModel> categoryModels) {
         categoryAdapter =  new AllCategoryListAdapter(this,categoryModels);
-        recyclerView.setAdapter(categoryAdapter);
        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(categoryAdapter);
